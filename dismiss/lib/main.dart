@@ -7,75 +7,7 @@ void main() {
   runApp(const MyApp());
 }
 
-/* class MyApp extends StatelessWidget {
-  final List<String> items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 
-  late int randomNumber;
-
-  int generateRandomNumber() {
-    randomNumber = Random().nextInt(4);
-    return randomNumber;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    generateRandomNumber();
-    return MaterialApp(
-      home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print(generateRandomNumber());
-          },
-          child: Icon(Icons.add),
-        ),
-        appBar: AppBar(
-          title: Text("Random number: ${randomNumber + 1}"),
-        ),
-        body: Container(
-          height: 250,
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
-
-              if (randomNumber == index) {
-                return Dismissible(
-                  key: Key(item),
-                  background: Container(
-                    color: Colors.red,
-                    alignment: Alignment.centerRight,
-                    child: const Icon(Icons.delete),
-                  ),
-                  direction: DismissDirection.startToEnd,
-                  onDismissed: (direction) {
-                    items.removeAt(index);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('$item dismissed')),
-                    );
-                  },
-                  child: ListTile(
-                    title: Text(item),
-                  ),
-                );
-              } else {
-                return Container(
-                  padding: const EdgeInsets.all(16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    item,
-                    style: const TextStyle(
-                      fontSize: 16,
-                    ),
-                  ),
-                );
-              }
-            },
-          ),
-        ),
-      ),
-    );
-  }
-} */
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
